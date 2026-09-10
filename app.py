@@ -70,7 +70,7 @@ def download_pdf(gdown):
             PDF_PATH.unlink(missing_ok=True)
 
     try:
-        result = gdown.download(PDF_URL, str(PDF_PATH), quiet=True, fuzzy=True)
+        result = gdown.download(PDF_URL, str(PDF_PATH), quiet=True)
         if not result:
             raise RuntimeError("gdown returned no file")
     except Exception as exc:
